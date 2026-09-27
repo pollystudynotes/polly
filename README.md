@@ -1,11 +1,17 @@
-# polly
+# Asme
 
-Single-page cinematic hero section: full-screen looping background video with a JS-driven fade loop, liquid-glass UI, and Instrument Serif typography.
+Медиа об ИИ, технологиях и финтехе. Формат вдохновлён vc.ru: лента со вкладками «Свежее», «Популярное» и «Закладки», разделы, форматы материалов (новости, интервью, рекапы, обзоры), страница статьи и блок популярного.
 
-Built with Vite, React 18, TypeScript, Tailwind CSS 3 and lucide-react.
+Стек: Vite, React 18, TypeScript, Tailwind CSS 3, lucide-react.
 
 ```bash
 npm install
-npm run dev      # start dev server
-npm run build    # typecheck + production build
+npm run dev      # локальный сервер
+npm run build    # проверка типов и сборка
 ```
+
+## Где что менять
+
+- `src/data/site.ts` — название, разделы и форматы. Раздел «Крипта» уже заведён, но выключен (`enabled: false`).
+- `src/data/posts.ts` — материалы. Сейчас там демо-контент: люди, компании и события вымышлены.
+- `src/components/BackgroundVideo.tsx` — фоновое видео в шапке с плавным зацикливанием.

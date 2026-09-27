@@ -27,14 +27,14 @@ function Header({ query, onQueryChange, onHome }: HeaderProps) {
         type="search"
         value={query}
         onChange={(event) => onQueryChange(event.target.value)}
-        placeholder="Поиск по материалам"
+        placeholder="Search stories"
         className="flex-1 min-w-0 bg-transparent outline-none text-white placeholder:text-white/40 text-sm"
       />
       {query && (
         <button
           type="button"
           onClick={() => onQueryChange('')}
-          aria-label="Очистить поиск"
+          aria-label="Clear search"
           className="text-white/50 hover:text-white p-1"
         >
           <X size={14} />
@@ -61,17 +61,17 @@ function Header({ query, onQueryChange, onHome }: HeaderProps) {
           <button
             type="button"
             onClick={() => setMobileSearchOpen((open) => !open)}
-            aria-label="Поиск"
+            aria-label="Search"
             aria-expanded={mobileSearchOpen}
             className="md:hidden text-white/80 hover:text-white p-2"
           >
             <Search size={20} />
           </button>
           <button type="button" className="hidden sm:block text-white text-sm font-medium">
-            Регистрация
+            Sign Up
           </button>
           <button type="button" className="liquid-glass rounded-full px-5 py-2 text-white text-sm font-medium">
-            Войти
+            Login
           </button>
         </div>
       </div>

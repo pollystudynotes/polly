@@ -18,20 +18,20 @@ export interface Format {
 export const SITE_NAME = 'Asme';
 
 export const SECTIONS: Section[] = [
-  { id: 'ai', label: 'ИИ', description: 'Модели, агенты, исследования', color: '#8fb8ff', enabled: true },
-  { id: 'tech', label: 'Технологии', description: 'Гаджеты, софт, инфраструктура', color: '#f2b26b', enabled: true },
-  { id: 'fintech', label: 'Финтех', description: 'Банки, платежи, регулирование', color: '#6fd6b0', enabled: true },
-  // Раздел готов, но пока скрыт. Чтобы включить, поставьте enabled: true.
-  { id: 'crypto', label: 'Крипта', description: 'Блокчейн и цифровые активы', color: '#e58fd0', enabled: false },
+  { id: 'ai', label: 'AI', description: 'Models, agents and research', color: '#8fb8ff', enabled: true },
+  { id: 'tech', label: 'Tech', description: 'Devices, software and infrastructure', color: '#f2b26b', enabled: true },
+  { id: 'fintech', label: 'Fintech', description: 'Banks, payments and regulation', color: '#6fd6b0', enabled: true },
+  // Ready but hidden for now. Set enabled: true to turn it on.
+  { id: 'crypto', label: 'Crypto', description: 'Blockchain and digital assets', color: '#e58fd0', enabled: false },
 ];
 
 export const ACTIVE_SECTIONS = SECTIONS.filter((section) => section.enabled);
 
 export const FORMATS: Format[] = [
-  { id: 'news', label: 'Новости', single: 'Новость' },
-  { id: 'interview', label: 'Интервью', single: 'Интервью' },
-  { id: 'recap', label: 'Рекапы', single: 'Рекап' },
-  { id: 'review', label: 'Обзоры', single: 'Обзор' },
+  { id: 'news', label: 'News', single: 'News' },
+  { id: 'interview', label: 'Interviews', single: 'Interview' },
+  { id: 'recap', label: 'Recaps', single: 'Recap' },
+  { id: 'review', label: 'Reviews', single: 'Review' },
 ];
 
 export const sectionById = (id: SectionId) => SECTIONS.find((section) => section.id === id)!;

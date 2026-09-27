@@ -14,9 +14,9 @@ import { ACTIVE_SECTIONS, formatById, sectionById } from './data/site';
 type Tab = 'fresh' | 'popular' | 'saved';
 
 const TABS: { id: Tab; label: string }[] = [
-  { id: 'fresh', label: 'Свежее' },
-  { id: 'popular', label: 'Популярное' },
-  { id: 'saved', label: 'Закладки' },
+  { id: 'fresh', label: 'Latest' },
+  { id: 'popular', label: 'Popular' },
+  { id: 'saved', label: 'Saved' },
 ];
 
 const enabledSectionIds = new Set(ACTIVE_SECTIONS.map((section) => section.id));
@@ -111,9 +111,9 @@ function App() {
     if (openPostId) showFeed();
   };
 
-  const heading = section === 'all' ? 'Лента' : sectionById(section).label;
+  const heading = section === 'all' ? 'The feed' : sectionById(section).label;
   const subheading = [
-    section === 'all' ? 'ИИ, технологии и финтех' : sectionById(section).description,
+    section === 'all' ? 'AI, tech and fintech' : sectionById(section).description,
     format !== 'all' ? formatById(format).label.toLowerCase() : null,
   ]
     .filter(Boolean)
@@ -162,7 +162,7 @@ function App() {
                     <h2 className="font-display text-4xl md:text-5xl text-white leading-none">{heading}</h2>
                     <p className="text-sm text-white/50 mt-2">{subheading}</p>
                   </div>
-                  <div role="tablist" aria-label="Сортировка ленты" className="liquid-glass rounded-full p-1 flex">
+                  <div role="tablist" aria-label="Sort the feed" className="liquid-glass rounded-full p-1 flex">
                     {TABS.map((item) => (
                       <button
                         key={item.id}
@@ -200,8 +200,8 @@ function App() {
                 <div className="rounded-2xl border border-dashed border-white/15 p-10 text-center space-y-4">
                   <p className="text-white/70">
                     {tab === 'saved' && saved.size === 0
-                      ? 'Здесь появятся материалы, которые вы добавите в закладки.'
-                      : 'По этим фильтрам ничего не нашлось.'}
+                      ? 'Stories you bookmark will show up here.'
+                      : 'No stories match these filters.'}
                   </p>
                   <button
                     type="button"
@@ -213,7 +213,7 @@ function App() {
                     }}
                     className="liquid-glass rounded-full px-6 py-2 text-sm text-white hover:bg-white/5 transition-colors"
                   >
-                    Показать все материалы
+                    Show all stories
                   </button>
                 </div>
               )}

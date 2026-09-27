@@ -20,14 +20,14 @@ const itemClass = (active: boolean) =>
 
 export function Sidebar({ section, format, onSectionChange, onFormatChange }: FiltersProps) {
   return (
-    <nav aria-label="Разделы и форматы" className="space-y-8">
+    <nav aria-label="Sections and formats" className="space-y-8">
       <div>
-        <h2 className="px-3 mb-2 text-[11px] uppercase tracking-[0.18em] text-white/40">Разделы</h2>
+        <h2 className="px-3 mb-2 text-[11px] uppercase tracking-[0.18em] text-white/40">Sections</h2>
         <ul className="space-y-1">
           <li>
             <button type="button" onClick={() => onSectionChange('all')} className={itemClass(section === 'all')}>
               <LayoutGrid size={16} />
-              Все разделы
+              All sections
             </button>
           </li>
           {ACTIVE_SECTIONS.map((item) => (
@@ -44,12 +44,12 @@ export function Sidebar({ section, format, onSectionChange, onFormatChange }: Fi
       </div>
 
       <div>
-        <h2 className="px-3 mb-2 text-[11px] uppercase tracking-[0.18em] text-white/40">Форматы</h2>
+        <h2 className="px-3 mb-2 text-[11px] uppercase tracking-[0.18em] text-white/40">Formats</h2>
         <ul className="space-y-1">
           <li>
             <button type="button" onClick={() => onFormatChange('all')} className={itemClass(format === 'all')}>
               <LayoutGrid size={16} />
-              Все форматы
+              All formats
             </button>
           </li>
           {FORMATS.map((item) => {
@@ -80,7 +80,7 @@ export function MobileFilters({ section, format, onSectionChange, onFormatChange
     <div className="lg:hidden space-y-2 -mx-4 md:-mx-6">
       <div className="flex gap-2 overflow-x-auto px-4 md:px-6 py-1 scrollbar-none">
         <button type="button" onClick={() => onSectionChange('all')} className={chipClass(section === 'all')}>
-          Все разделы
+          All sections
         </button>
         {ACTIVE_SECTIONS.map((item) => (
           <button key={item.id} type="button" onClick={() => onSectionChange(item.id)} className={chipClass(section === item.id)}>
@@ -90,7 +90,7 @@ export function MobileFilters({ section, format, onSectionChange, onFormatChange
       </div>
       <div className="flex gap-2 overflow-x-auto px-4 md:px-6 py-1 scrollbar-none">
         <button type="button" onClick={() => onFormatChange('all')} className={chipClass(format === 'all')}>
-          Все форматы
+          All formats
         </button>
         {FORMATS.map((item) => (
           <button key={item.id} type="button" onClick={() => onFormatChange(item.id)} className={chipClass(format === item.id)}>

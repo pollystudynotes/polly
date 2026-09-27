@@ -14,7 +14,7 @@ function RightRail({ onOpen }: RightRailProps) {
   return (
     <div className="space-y-6">
       <section className="rounded-2xl bg-white/[0.03] border border-white/[0.07] p-5">
-        <h2 className="text-white font-semibold mb-4">Популярное за неделю</h2>
+        <h2 className="text-white font-semibold mb-4">Most read this week</h2>
         <ol className="space-y-4">
           {popular.map((post, index) => (
             <li key={post.id}>
@@ -24,7 +24,7 @@ function RightRail({ onOpen }: RightRailProps) {
                 </span>
                 <span className="space-y-1">
                   <span className="block text-sm text-white/85 group-hover:text-white leading-snug">{post.title}</span>
-                  <span className="block text-xs text-white/40">{compactNumber(post.views)} просмотров</span>
+                  <span className="block text-xs text-white/40">{compactNumber(post.views)} views</span>
                 </span>
               </button>
             </li>
@@ -33,7 +33,7 @@ function RightRail({ onOpen }: RightRailProps) {
       </section>
 
       <section className="rounded-2xl bg-white/[0.03] border border-white/[0.07] p-5">
-        <h2 className="text-white font-semibold mb-4">Интервью</h2>
+        <h2 className="text-white font-semibold mb-4">Interviews</h2>
         <ul className="space-y-4">
           {interviews.map((post) => (
             <li key={post.id}>
@@ -50,10 +50,10 @@ function RightRail({ onOpen }: RightRailProps) {
       </section>
 
       <section className="px-1 space-y-2">
-        <h2 className="text-white/40 text-[11px] uppercase tracking-[0.18em]">О проекте</h2>
+        <h2 className="text-white/40 text-[11px] uppercase tracking-[0.18em]">About</h2>
         <p className="text-sm text-white/60 leading-relaxed">
-          {SITE_NAME} — независимое медиа об ИИ, технологиях и финтехе. Пишем о том, что меняет рынок, и говорим с
-          теми, кто его строит.
+          {SITE_NAME} is an independent publication about AI, tech and fintech. We cover what moves the market and
+          talk to the people building it.
         </p>
       </section>
     </div>

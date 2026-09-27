@@ -3,7 +3,6 @@ import Cover from './Cover';
 import { PostMeta, PostStats } from './PostParts';
 import { POSTS } from '../data/posts';
 import type { Block, Post } from '../data/posts';
-import { plural } from '../lib/format';
 
 interface ArticleViewProps {
   post: Post;
@@ -30,7 +29,7 @@ function renderBlock(block: Block, index: number) {
       return (
         <figure key={index} className="py-4">
           <blockquote className="font-display italic text-3xl md:text-4xl text-white leading-tight text-balance">
-            «{block.text}»
+            “{block.text}”
           </blockquote>
           <figcaption className="mt-3 text-sm text-white/50">{block.by}</figcaption>
         </figure>
@@ -57,7 +56,7 @@ function ArticleView({ post, liked, saved, onBack, onOpen, onSectionClick, onLik
         onClick={onBack}
         className="liquid-glass rounded-full px-4 py-2 text-sm text-white/80 hover:text-white inline-flex items-center gap-2 mb-8"
       >
-        <ArrowLeft size={16} />К ленте
+        <ArrowLeft size={16} />Back to feed
       </button>
 
       <PostMeta post={post} onSectionClick={onSectionClick} />
@@ -74,7 +73,7 @@ function ArticleView({ post, liked, saved, onBack, onOpen, onSectionClick, onLik
         <span>
           <span className="block text-white">{post.author.name}</span>
           <span className="block text-white/45">
-            {post.author.role} · {post.readMinutes} {plural(post.readMinutes, ['минута', 'минуты', 'минут'])} чтения
+            {post.author.role} · {post.readMinutes} min read
           </span>
         </span>
       </div>
@@ -88,7 +87,7 @@ function ArticleView({ post, liked, saved, onBack, onOpen, onSectionClick, onLik
       </div>
 
       <section className="mt-16">
-        <h2 className="text-white/40 text-[11px] uppercase tracking-[0.18em] mb-4">Читайте также</h2>
+        <h2 className="text-white/40 text-[11px] uppercase tracking-[0.18em] mb-4">Read next</h2>
         <ul className="grid gap-4 sm:grid-cols-3">
           {related.map((item) => (
             <li key={item.id}>

@@ -5,10 +5,10 @@ const SOCIAL_LINKS = [
   { label: 'Telegram', Icon: Send },
   { label: 'Instagram', Icon: Instagram },
   { label: 'Twitter', Icon: Twitter },
-  { label: 'Сайт', Icon: Globe },
+  { label: 'Website', Icon: Globe },
 ];
 
-const LINKS = ['О проекте', 'Редакция', 'Реклама', 'Контакты'];
+const LINKS = ['About', 'Team', 'Advertise', 'Contact'];
 
 function Footer() {
   return (
@@ -19,10 +19,10 @@ function Footer() {
             <Globe size={20} />
             {SITE_NAME}
           </p>
-          <p className="text-xs text-white/40">© 2026 {SITE_NAME}. Демо-версия: материалы, люди и компании вымышлены.</p>
+          <p className="text-xs text-white/40">© 2026 {SITE_NAME}. Demo content: all stories, people and companies are fictional.</p>
         </div>
 
-        <nav aria-label="О сайте" className="flex flex-wrap gap-x-6 gap-y-2 md:mx-auto">
+        <nav aria-label="Site links" className="flex flex-wrap gap-x-6 gap-y-2 md:mx-auto">
           {LINKS.map((link) => (
             <a key={link} href="#" className="text-sm text-white/60 hover:text-white transition-colors">
               {link}

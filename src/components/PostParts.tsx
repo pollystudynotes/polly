@@ -57,17 +57,17 @@ export function PostStats({ post, liked, saved, onLike, onSave }: PostStatsProps
         type="button"
         onClick={stop(onLike)}
         aria-pressed={liked}
-        aria-label="Нравится"
+        aria-label="Like"
         className={`flex items-center gap-1.5 transition-colors ${liked ? 'text-rose-400' : 'hover:text-white'}`}
       >
         <Heart size={17} fill={liked ? 'currentColor' : 'none'} />
         {compactNumber(post.likes + (liked ? 1 : 0))}
       </button>
-      <span className="flex items-center gap-1.5" title="Комментарии">
+      <span className="flex items-center gap-1.5" title="Comments">
         <MessageCircle size={17} />
         {post.comments}
       </span>
-      <span className="flex items-center gap-1.5" title="Просмотры">
+      <span className="flex items-center gap-1.5" title="Views">
         <Eye size={17} />
         {compactNumber(post.views)}
       </span>
@@ -75,7 +75,7 @@ export function PostStats({ post, liked, saved, onLike, onSave }: PostStatsProps
         type="button"
         onClick={stop(onSave)}
         aria-pressed={saved}
-        aria-label={saved ? 'Убрать из закладок' : 'В закладки'}
+        aria-label={saved ? 'Remove bookmark' : 'Bookmark'}
         className={`ml-auto transition-colors ${saved ? 'text-white' : 'hover:text-white'}`}
       >
         <Bookmark size={17} fill={saved ? 'currentColor' : 'none'} />

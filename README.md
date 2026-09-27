@@ -1,17 +1,17 @@
 # Asme
 
-Медиа об ИИ, технологиях и финтехе. Формат вдохновлён vc.ru: лента со вкладками «Свежее», «Популярное» и «Закладки», разделы, форматы материалов (новости, интервью, рекапы, обзоры), страница статьи и блок популярного.
+A media site about AI, tech and fintech, modeled on vc.ru: a feed with Latest, Popular and Saved tabs, sections, story formats (news, interviews, recaps, reviews), an article page and a most-read rail.
 
-Стек: Vite, React 18, TypeScript, Tailwind CSS 3, lucide-react.
+Stack: Vite, React 18, TypeScript, Tailwind CSS 3, lucide-react.
 
 ```bash
 npm install
-npm run dev      # локальный сервер
-npm run build    # проверка типов и сборка
+npm run dev      # dev server
+npm run build    # typecheck + production build
 ```
 
-## Где что менять
+## Where to change things
 
-- `src/data/site.ts` — название, разделы и форматы. Раздел «Крипта» уже заведён, но выключен (`enabled: false`).
-- `src/data/posts.ts` — материалы. Сейчас там демо-контент: люди, компании и события вымышлены.
-- `src/components/BackgroundVideo.tsx` — фоновое видео в шапке с плавным зацикливанием.
+- `src/data/site.ts` — site name, sections and formats. A Crypto section is set up but disabled (`enabled: false`).
+- `src/data/posts.ts` — stories. Currently demo content: all people, companies and events are fictional.
+- `src/components/BackgroundVideo.tsx` — the masthead background video with its seamless fade loop.

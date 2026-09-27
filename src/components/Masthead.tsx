@@ -22,13 +22,13 @@ function Masthead() {
           {ACTIVE_SECTIONS.map((section) => section.label).join(' · ')}
         </p>
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-white mb-8 tracking-tight leading-[0.95] text-balance">
-          Медиа для любознательных
+          Built for the curious
         </h1>
 
         <div className="max-w-xl w-full space-y-4">
           {subscribed ? (
             <div className="liquid-glass rounded-full pl-6 pr-2 py-2 flex items-center gap-3 text-left">
-              <p className="flex-1 text-white text-base py-2">Готово! Первое письмо придёт в пятницу.</p>
+              <p className="flex-1 text-white text-base py-2">You're in. The first issue arrives on Friday.</p>
               <span className="bg-white rounded-full p-3 text-black">
                 <Check size={20} />
               </span>
@@ -39,17 +39,17 @@ function Masthead() {
                 id="newsletter-email"
                 type="email"
                 required
-                placeholder="Ваш email"
-                aria-label="Адрес электронной почты"
+                placeholder="Enter your email"
+                aria-label="Email address"
                 className="flex-1 min-w-0 bg-transparent outline-none text-white placeholder:text-white/40 text-base"
               />
-              <button type="submit" aria-label="Подписаться на рассылку" className="bg-white rounded-full p-3 text-black">
+              <button type="submit" aria-label="Subscribe to the newsletter" className="bg-white rounded-full p-3 text-black">
                 <ArrowRight size={20} />
               </button>
             </form>
           )}
           <p className="text-white/85 text-sm leading-relaxed px-4">
-            Новости, интервью, рекапы и обзоры. Главное за неделю каждую пятницу у вас в почте.
+            News, interviews, event recaps and reviews. The week in AI, tech and fintech, in your inbox every Friday.
           </p>
         </div>
       </div>
